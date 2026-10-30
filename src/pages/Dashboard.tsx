@@ -38,7 +38,7 @@ export function Dashboard() {
       </section>
 
       <div className="dash-top">
-        <div className="panel streak-stat">
+        <div className="panel streak-stat glass-streak">
           <p className="eyebrow">Streak</p>
           <p className="big">{streak}</p>
           <p className="muted">{streak === 1 ? 'day' : 'days'} in a row</p>
