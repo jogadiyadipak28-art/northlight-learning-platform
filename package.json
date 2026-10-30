@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@splinetool/react-spline": "^4.1.0",
     "motion": "^14.8.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",

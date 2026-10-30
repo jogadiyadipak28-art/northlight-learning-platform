@@ -26,7 +26,7 @@ An immersive learning platform for photography, film, sound, writing, and visual
 
 ## A quick look
 
-Northlight pairs a calm, dark study-hall atmosphere with warm course photography, an interactive hero scene, and a portrait testimonial reel. The layout adapts for desktop and mobile screens.
+Northlight pairs a calm, dark study-hall atmosphere with warm course photography, an interactive particle hero, and a portrait testimonial reel. The particle field responds to pointer movement and respects reduced-motion settings. The layout adapts for desktop and mobile screens.
 
 ## Run locally
 
@@ -54,6 +54,7 @@ Vite prints the local address after the development server starts.
 - React and TypeScript
 - Vite
 - React Router
+- Canvas-based particle animation
 - CSS, with responsive layouts and reduced-motion support
 - Local browser storage for learner progress
 
