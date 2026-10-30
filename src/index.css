@@ -236,9 +236,12 @@ img { max-width: 100%; }
   align-items: center;
   padding: clamp(30px, 6vw, 72px) 0 clamp(54px, 8vw, 92px);
 }
-.home-hero-copy { position: relative; z-index: 2; width: min(650px, 68%); }
-.home-hero h1 { max-width: 11ch; font-size: clamp(3rem, 6.8vw, 5.5rem); line-height: 0.99; margin: 10px 0 22px; }
-.home-hero .lede { max-width: 48ch; }
+.home-hero-copy { position: relative; z-index: 2; width: min(880px, 100%); margin: 0 auto; text-align: center; }
+.hero-brand { display: inline-flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 24px; color: #f8f6ff; font-family: Fraunces, Georgia, serif; font-size: clamp(1rem, 1.8vw, 1.25rem); font-weight: 650; letter-spacing: .035em; text-shadow: 0 2px 16px rgba(12, 12, 39, .72); }
+.hero-brand .brand-mark { width: 17px; height: 17px; background: #ffcf91; box-shadow: 10px 0 0 #8ff2dc, 0 0 20px rgba(143,242,220,.65); }
+.home-hero h1 { max-width: 17ch; margin: 0 auto 24px; font-size: clamp(3.1rem, 7.2vw, 6.2rem); line-height: 1.02; background: linear-gradient(104deg, #f5fff9 2%, #a1f6df 27%, #9edbff 54%, #c9b7ff 78%, #ffe2ef 100%); background-clip: text; -webkit-background-clip: text; color: transparent; filter: drop-shadow(0 5px 22px rgba(119, 115, 255, .32)); }
+.home-hero .lede { max-width: 50ch; margin-right: auto; margin-left: auto; color: #f0edff; text-shadow: 0 2px 15px rgba(9, 12, 35, .76); }
+.home-hero .hero-actions { justify-content: center; }
 .hero-feature {
   min-height: 380px;
   height: 100%;
@@ -665,8 +668,8 @@ img { max-width: 100%; }
   }
   .search { grid-column: auto; }
   .home-hero { min-height: 500px; }
-  .home-hero-copy { width: min(650px, 78%); }
-  .home-hero h1 { max-width: 13ch; }
+  .home-hero-copy { width: min(880px, 100%); }
+  .home-hero h1 { max-width: 15ch; }
   .site-sidebar { left: 14px; width: 66px; align-items: center; padding: 16px 8px; border-radius: 22px; }
   .site-sidebar .brand { justify-content: center; }
   .site-sidebar .brand > span:last-child, .sidebar-nav a { font-size: 0; }
@@ -694,6 +697,7 @@ img { max-width: 100%; }
   .home-hero { min-height: 520px; padding-top: 28px; }
   .home-hero-copy { width: 100%; }
   .home-hero h1 { font-size: clamp(2.8rem, 13vw, 4.2rem); }
+  .hero-brand { margin-bottom: 20px; }
   .particle-hero-hint { right: 0; bottom: 22px; font-size: .6rem; }
   .section-heading { align-items: flex-start; }
   .section-heading .muted { max-width: 40ch; }

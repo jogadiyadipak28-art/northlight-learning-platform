@@ -10,7 +10,10 @@ export function HomePage() {
       <section className="home-hero">
         <ParticleEffectHero />
         <div className="home-hero-copy">
-          <p className="eyebrow">Northlight Atelier · Learn by looking</p>
+          <div className="hero-brand" aria-label="Northlight Atelier">
+            <span className="brand-mark" aria-hidden="true" />
+            <span>Northlight Atelier</span>
+          </div>
           <h1>Make work that makes people look twice.</h1>
           <p className="lede">
             Practical courses in photography, film, sound, and storytelling. Learn a craft, try it in your work,
