@@ -60,6 +60,7 @@ img { max-width: 100%; }
 .bubble-orb-six { width: 100%; height: 100%; opacity: .7; }
 .controls { z-index: 2; }
 .site-sidebar { position: fixed; z-index: 30; top: 50%; left: 24px; display: flex; width: 190px; flex-direction: column; gap: 26px; padding: 20px 14px 16px; border: 1px solid rgba(255,255,255,.16); border-radius: 24px; background: rgba(18, 20, 47, .66); box-shadow: 0 18px 60px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.1); backdrop-filter: blur(22px); transform: translateY(-50%); }
+.theme-switch-floating { display: none; }
 .brand {
   display: flex;
   gap: 10px;
@@ -755,4 +756,131 @@ img { max-width: 100%; }
   .site-sidebar, .site-foot, .no-print, .bubble-background { display: none !important; }
   body { background: white; }
   .certificate { box-shadow: none; }
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --paper: #fff4e8;
+  --ink: #38251e;
+  --muted: #6d584e;
+  --card-muted: #6b554a;
+  --accent: #d9825d;
+  --card-accent: #a94f32;
+  --accent-2: #426d65;
+  --card: #fffaf4;
+  --line: #ead4c4;
+  --shadow: 0 18px 40px rgba(103, 62, 39, .12);
+}
+
+:root[data-theme='light'] body,
+:root[data-theme='light'] .page { color: var(--ink); }
+:root[data-theme='light'] body { background: #f8e9dc; }
+:root[data-theme='light'] .bubble-background { background: linear-gradient(135deg, #f7e5d5 0%, #f8eee3 52%, #f2d8c8 100%); }
+:root[data-theme='light'] .bubble-background::after { background: rgba(255, 247, 237, .66); }
+:root[data-theme='light'] .bubble-field { opacity: .24; mix-blend-mode: multiply; }
+:root[data-theme='light'] .site-sidebar {
+  border-color: rgba(128, 82, 58, .2);
+  background: rgba(255, 249, 242, .9);
+  box-shadow: 0 18px 60px rgba(103, 62, 39, .13), inset 0 1px 0 rgba(255,255,255,.9);
+}
+:root[data-theme='light'] .brand { color: #38251e; }
+:root[data-theme='light'] .sidebar-nav a { color: #5c463d; }
+:root[data-theme='light'] .sidebar-nav a:hover { color: #38251e; background: rgba(169, 79, 50, .09); }
+:root[data-theme='light'] .sidebar-nav a.active { color: #6f3526; border-color: rgba(169, 79, 50, .24); background: rgba(217, 130, 93, .16); }
+:root[data-theme='light'] .sidebar-caption,
+:root[data-theme='light'] .sidebar-switch { color: #6d584e; border-color: rgba(128, 82, 58, .18); }
+:root[data-theme='light'] .btn.ghost { color: #38251e; border-color: rgba(91, 57, 42, .38); background: rgba(255, 250, 244, .8); }
+:root[data-theme='light'] .text-btn { color: var(--card-accent); }
+:root[data-theme='light'] .hero-brand { color: #52352b; text-shadow: none; }
+:root[data-theme='light'] .hero-brand .brand-mark { background: #d9825d; box-shadow: 10px 0 0 #7aa99d, 0 0 16px rgba(122,169,157,.35); }
+:root[data-theme='light'] .home-hero h1 {
+  background-image: linear-gradient(105deg, #673e31 5%, #a44f37 48%, #bd7047 100%);
+  filter: none;
+}
+:root[data-theme='light'] .home-hero .lede { color: #59483f; text-shadow: none; }
+:root[data-theme='light'] .particle-hero-hint { color: rgba(74, 55, 46, .72); }
+:root[data-theme='light'] .carousel-controls button:hover { background: #f1dfd0; }
+:root[data-theme='light'] .course-carousel { scrollbar-color: #c49b80 transparent; }
+:root[data-theme='light'] .testimonials-section { border-color: rgba(128, 82, 58, .2); }
+:root[data-theme='light'] .scroll-reel-testimonials,
+:root[data-theme='light'] .scroll-reel-quote,
+:root[data-theme='light'] .scroll-reel-author { color: #38251e; }
+:root[data-theme='light'] .scroll-reel-role,
+:root[data-theme='light'] .scroll-reel-count { color: #6d584e; }
+:root[data-theme='light'] .scroll-reel-controls button { color: #52352b; border-color: rgba(91, 57, 42, .32); }
+:root[data-theme='light'] .glass-streak.panel,
+:root[data-theme='light'] .glass-calendar.panel {
+  color: #38251e;
+  border-color: rgba(128, 82, 58, .2);
+  background: linear-gradient(142deg, rgba(255,250,244,.97), rgba(255,242,229,.94) 58%, rgba(239,204,180,.7));
+  box-shadow: 0 22px 50px rgba(103, 62, 39, .12), inset 0 1px 0 rgba(255,255,255,.95);
+  -webkit-backdrop-filter: blur(24px) saturate(120%);
+  backdrop-filter: blur(24px) saturate(120%);
+}
+:root[data-theme='light'] .glass-streak .eyebrow,
+:root[data-theme='light'] .glass-calendar-kicker { color: #8e5038; }
+:root[data-theme='light'] .glass-streak .big,
+:root[data-theme='light'] .glass-calendar-heading h2 { color: #38251e; text-shadow: none; }
+:root[data-theme='light'] .glass-streak .muted,
+:root[data-theme='light'] .glass-calendar-summary { color: #6d584e; }
+:root[data-theme='light'] .calendar-view-switch,
+:root[data-theme='light'] .calendar-period-controls { border-color: rgba(128,82,58,.2); background: rgba(238,218,202,.62); }
+:root[data-theme='light'] .calendar-view-switch button,
+:root[data-theme='light'] .calendar-period-controls button,
+:root[data-theme='light'] .calendar-today-button { color: #5c463d; }
+:root[data-theme='light'] .calendar-view-switch button:hover,
+:root[data-theme='light'] .calendar-period-controls button:hover,
+:root[data-theme='light'] .calendar-today-button:hover { color: #38251e; background: rgba(169,79,50,.1); }
+:root[data-theme='light'] .calendar-view-switch button.is-active { color: #713b2b; background: rgba(217,130,93,.22); box-shadow: inset 0 1px 0 rgba(255,255,255,.7); }
+:root[data-theme='light'] .calendar-view-switch button:focus-visible,
+:root[data-theme='light'] .calendar-period-controls button:focus-visible,
+:root[data-theme='light'] .cal-cell:focus-visible,
+:root[data-theme='light'] .calendar-today-button:focus-visible { outline-color: #a94f32; }
+:root[data-theme='light'] .cal-cell { color: #49372f; border-color: rgba(128,82,58,.16); background: rgba(255,250,244,.7); }
+:root[data-theme='light'] .cal-cell:not(.empty):hover { border-color: rgba(169,79,50,.42); background: #fffaf4; }
+:root[data-theme='light'] .cal-cell .cal-day-name { color: #806a5d; }
+:root[data-theme='light'] .cal-cell.is-on { color: #49372f; border-color: rgba(66,109,101,.38); background: linear-gradient(145deg, rgba(122,169,157,.25), rgba(217,130,93,.2)); box-shadow: inset 0 1px 0 rgba(255,255,255,.8); }
+:root[data-theme='light'] .cal-cell.is-on .cal-day-name { color: #426d65; }
+:root[data-theme='light'] .cal-cell.is-selected { outline-color: #a94f32; }
+:root[data-theme='light'] .cal-cell.is-today strong { color: #9b5035; }
+:root[data-theme='light'] .cal-activity-dot,
+:root[data-theme='light'] .calendar-status-dot.is-on { background: #4a8276; box-shadow: 0 0 8px rgba(74,130,118,.32); }
+:root[data-theme='light'] .calendar-selected-day { border-color: rgba(128,82,58,.18); background: rgba(238,218,202,.52); }
+:root[data-theme='light'] .calendar-selected-day strong { color: #38251e; }
+:root[data-theme='light'] .calendar-selected-day > span:last-child,
+:root[data-theme='light'] .calendar-help { color: #6d584e; }
+:root[data-theme='light'] .calendar-today-button { color: #8b4b34; }
+:root[data-theme='light'] .crumb a { color: #8b4b34; }
+:root[data-theme='light'] .lesson-nav a { color: #426d65; }
+:root[data-theme='light'] .choice,
+:root[data-theme='light'] .order-item { color: #38251e; background: #fffaf4; }
+:root[data-theme='light'] .t-line.is-active { background: #f3e2d4; color: #38251e; }
+:root[data-theme='light'] .cert-copy,
+:root[data-theme='light'] .empty { color: #6d584e; }
+
+@media (max-width: 900px) {
+  .theme-switch-floating {
+    position: fixed;
+    z-index: 40;
+    top: 12px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 18px;
+    color: #f8f6ff;
+    background: rgba(18,20,47,.82);
+    box-shadow: 0 8px 28px rgba(0,0,0,.2);
+    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
+    font-size: .78rem;
+  }
+  :root[data-theme='light'] .theme-switch-floating {
+    color: #49372f;
+    border-color: rgba(128,82,58,.2);
+    background: rgba(255,249,242,.92);
+    box-shadow: 0 8px 28px rgba(103,62,39,.14);
+  }
 }

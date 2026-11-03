@@ -1,11 +1,32 @@
+import { useEffect, useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { BubbleBackground } from './BubbleBackground'
 import { StarWarsToggleSwitch } from './StarWarsToggleSwitch'
 
+type Theme = 'dark' | 'light'
+
 export function Layout() {
+  const [theme, setTheme] = useState<Theme>(() => (
+    window.localStorage.getItem('northlight-theme') === 'light' ? 'light' : 'dark'
+  ))
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    window.localStorage.setItem('northlight-theme', theme)
+  }, [theme])
+
+  const lightBubbleColors = theme === 'light' ? {
+    first: '226, 157, 120',
+    second: '241, 185, 151',
+    third: '252, 210, 177',
+    fourth: '223, 157, 127',
+    fifth: '235, 177, 144',
+    sixth: '248, 199, 165',
+  } : undefined
+
   return (
     <div className="shell">
-      <BubbleBackground />
+      <BubbleBackground colors={lightBubbleColors} />
       <aside className="site-sidebar" aria-label="Main navigation">
         <NavLink to="/" className="brand" aria-label="Northlight home">
           <span className="brand-mark" aria-hidden="true" />
@@ -26,11 +47,15 @@ export function Layout() {
           </NavLink>
         </nav>
         <div className="sidebar-switch">
-          <span>BB-8</span>
-          <StarWarsToggleSwitch />
+          <span>{theme === 'light' ? 'Light mode' : 'Dark mode'}</span>
+          <StarWarsToggleSwitch checked={theme === 'light'} onChange={(light) => setTheme(light ? 'light' : 'dark')} />
         </div>
         <div className="sidebar-caption">A quieter way to learn.</div>
       </aside>
+      <div className="theme-switch-floating">
+        <span>{theme === 'light' ? 'Light mode' : 'Dark mode'}</span>
+        <StarWarsToggleSwitch checked={theme === 'light'} onChange={(light) => setTheme(light ? 'light' : 'dark')} />
+      </div>
       <Outlet />
       <footer className="site-foot">
         A quiet study hall. Progress lives in this browser.

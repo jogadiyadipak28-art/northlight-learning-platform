@@ -1,10 +1,22 @@
 import './star-wars-toggle-switch.css'
 
-export function StarWarsToggleSwitch() {
+type StarWarsToggleSwitchProps = {
+  checked: boolean
+  onChange: (checked: boolean) => void
+}
+
+export function StarWarsToggleSwitch({ checked, onChange }: StarWarsToggleSwitchProps) {
   return (
     <div className="star-wars-toggle">
       <label className="bb8-toggle">
-        <input className="bb8-toggle__checkbox" type="checkbox" aria-label="Toggle BB-8 day and night mode" />
+        <input
+          className="bb8-toggle__checkbox"
+          type="checkbox"
+          role="switch"
+          checked={checked}
+          onChange={(event) => onChange(event.currentTarget.checked)}
+          aria-label={`Switch to ${checked ? 'dark' : 'light'} mode`}
+        />
         <div className="bb8-toggle__container">
           <div className="bb8-toggle__scenery">
             <div className="bb8-toggle__star" />

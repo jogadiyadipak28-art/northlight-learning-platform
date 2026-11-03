@@ -942,6 +942,6 @@
   .bb8:hover .bb8__head::after {
     background-position: 0 0 !important;
   }
-.star-wars-toggle .bb8-toggle { position: relative; display: inline-block; --toggle-size: 10px; }
+.star-wars-toggle .bb8-toggle { position: relative; display: inline-block; --toggle-size: 8px; }
 .star-wars-toggle .bb8-toggle__checkbox { display: block; position: absolute; inset: 0; z-index: 3; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
 .star-wars-toggle .bb8-toggle__checkbox:focus-visible + .bb8-toggle__container { outline: 3px solid #ffb36e; outline-offset: 4px; }
