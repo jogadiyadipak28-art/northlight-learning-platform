@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { BubbleBackground } from './BubbleBackground'
+import { StarWarsToggleSwitch } from './StarWarsToggleSwitch'
 
 export function Layout() {
   return (
@@ -24,6 +25,10 @@ export function Layout() {
             Progress
           </NavLink>
         </nav>
+        <div className="sidebar-switch">
+          <span>BB-8</span>
+          <StarWarsToggleSwitch />
+        </div>
         <div className="sidebar-caption">A quieter way to learn.</div>
       </aside>
       <Outlet />
